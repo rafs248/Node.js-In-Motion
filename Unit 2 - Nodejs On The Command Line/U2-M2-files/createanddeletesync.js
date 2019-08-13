@@ -1,3 +1,4 @@
+// HINT: Creating and deleting files in synchronous way
 
 const fs = require('fs');
 

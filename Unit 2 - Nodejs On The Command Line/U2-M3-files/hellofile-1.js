@@ -9,6 +9,10 @@ const rl = readline.createInterface({
 // A default greeting
 let lastGreeting = 'None';
 
+
+// HINT: Checking whether file exists
+// HINT: Reading a file
+
 // Check whether the file exists
 fs.stat('message.txt', (err, stats) => {
 

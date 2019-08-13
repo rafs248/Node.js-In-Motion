@@ -11,6 +11,7 @@ rl.question("Pick a number: ", (number1) => {
 
   rl.question("Pick a second number: ", (number2) => {
 
+//  HINT: Parse Integer
   	const product = parseInt(number1) + parseInt(number2);
 	console.log(`${number1} + ${number2} = ${product}`);
 

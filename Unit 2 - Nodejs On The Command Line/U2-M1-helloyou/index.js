@@ -6,6 +6,7 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
+// HINT: Reading from the console
 rl.question("What's your name? ", (answer) => {
   
   console.log(`Well hello there ${answer}`);
