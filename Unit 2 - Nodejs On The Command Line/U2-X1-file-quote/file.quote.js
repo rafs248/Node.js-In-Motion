@@ -1,26 +1,25 @@
 const readline = require('readline');
 const fs = require('fs');
 
-const rl = readline.createInterface({
+const consoleReader = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
 
 
-rl.question("Please enter file name:", (filename) => {
-    console.log(`Selected file: ${filename}`);
-    const rf = readline.createInterface({
+consoleReader.question("Please enter file name:", (filename) => {
+    if(filename.length>0) {
+        console.log(`Selected file: [${filename}]`);
+    }else{
+        filename = 'book-authors.txt';
+        console.log(`Using default file: [${filename}]`);
+    }
+    const fileReader = readline.createInterface({
         input: fs.createReadStream(filename),
-        output: fs.createWriteStream(filename+".out")
     });
 
-    rf.on('line', (line) => {
-        console.log(line);
-        rf.write("-"+line+"-")
+    fileReader.on('line', (line) => {
+        console.log("-"+line+"-");
     })
-
-//    rf.close();
-    rl.close();
-    // wf.close();
-
+    consoleReader.close();
 });
