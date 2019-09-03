@@ -1,3 +1,8 @@
+/**
+ * This program adds quotes to every line of a file. It asks for a filename and
+ * displays results on the screen. If no file is provided then it uses default one.
+ */
+
 const readline = require('readline');
 const fs = require('fs');
 
