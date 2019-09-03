@@ -3,6 +3,8 @@
  * Fancy script to tell me the weather
  */
 
+// HINT: Getting data via HTTP
+
 // Requirements
 const http = require('http');
 
