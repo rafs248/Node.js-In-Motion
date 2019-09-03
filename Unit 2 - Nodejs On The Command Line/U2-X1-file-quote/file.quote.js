@@ -10,18 +10,17 @@ const rl = readline.createInterface({
 rl.question("Please enter file name:", (filename) => {
     console.log(`Selected file: ${filename}`);
     const rf = readline.createInterface({
-        input: fs.createReadStream(filename)
+        input: fs.createReadStream(filename),
+        output: fs.createWriteStream(filename+".out")
     });
-    // const wf = readline.createInterface({
-    //     output: fs.createWriteStream(filename+".out")
-    // });
 
     rf.on('line', (line) => {
         console.log(line);
-        // wf.write("-"+line+"-")
+        rf.write("-"+line+"-")
     })
 
 //    rf.close();
     rl.close();
     // wf.close();
+
 });
