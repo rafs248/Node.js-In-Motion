@@ -26,10 +26,10 @@ http.createServer(async (req, res) => {
 
             // Parse the body into usable POST data
             const query = qs.parse(body);
-            console.log(query);
+            console.log('query: ',query);
             
             // Send the results page
-            serveFile(res, 'results.html', results);
+            serveFile(res, 'results.html', null);
 
         });
         

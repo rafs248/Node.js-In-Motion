@@ -21,7 +21,7 @@ http.createServer(async (req, res) => {
         });
 
         // Data arrival complete - do things!
-        req.on('end', () {
+        req.on('end', () => {
 
             // Send the results page
             serveFile(res, 'results.html');
