@@ -29,8 +29,8 @@ var proxyUrl = "http://proxy-l.com.hmpo.net%3A3128";
 
 var proxiedRequest = req.defaults({'proxy': proxyUrl});
 
-proxiedRequest.get("http://bbc.co.uk", function (error, response, body) {
+req.get("https://rafs248-pub.s3.eu-west-2.amazonaws.com/www-test-file-2.txt", function (error, response, body) {
     console.log(`Received error: ${error}`);
     console.log(`Received response:`,response);
-   console.log(`Received body: ${body}`);
+    console.log(`Received body: ${body}`);
 })
