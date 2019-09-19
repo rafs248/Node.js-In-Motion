@@ -1,11 +1,7 @@
-// TODO: continue on this program
-
 /**
  * SPEC: This program will download json file from S3 and list few fields from it.
  *
  * STATUS: done
- *
- *
  */
 
 
