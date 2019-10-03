@@ -62,12 +62,14 @@ async function serveFile(res, fileName, keyPairs) {
         
         // Get a list of keys
         const keys = Object.keys(keyPairs)
+        console.log(`keys: ${keys}, keyPairs:`,keyPairs);
 
         // For each key
         for (key in keys) {
 
             // Get the key name
             const keyName = keys[key];
+            console.log(`key: ${key}, keyName: ${keyName}`);
 
             // Replace all instances of the key name with the key value
             content = content.replace(new RegExp(`{${keyName}}`, 'g'), keyPairs[keyName]);

@@ -25,7 +25,7 @@ app.post('/', (req, res) => {
         mul: num1 * num2
     };
     
-    res.render(__dirname + '/index.ejs', results);
+    res.render(__dirname + '/results.pug', results);
 
 });
 

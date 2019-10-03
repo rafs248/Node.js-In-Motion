@@ -6,7 +6,7 @@ const app = express();
 app.get('/', (req, res) => {
 
     // Render the template
-    res.render(__dirname + '/index.pug');
+    res.render(__dirname + '/index-1.pug');
     
 });
 
