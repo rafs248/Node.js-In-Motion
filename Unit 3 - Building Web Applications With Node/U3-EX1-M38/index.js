@@ -1,6 +1,12 @@
-const app = require('express');
+const express = require('express');
 
-app.get('/*',(req,resp)=>{
-    resp.write('Hello world');
+const app = express();
+
+app.get('/',( req,resp) => {
+    let myTemplate = 'index';
+    let data = {currentTime: new Date()};
+    resp.render(`${__dirname}/templates/${myTemplate}.pug`, data );
     resp.end();
-}).start(8080);
+}).listen(8080);
+
+console.log("Server listening on 8080");
