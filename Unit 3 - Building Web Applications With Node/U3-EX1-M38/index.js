@@ -11,6 +11,14 @@ app.get('/',( req,resp) => {
         resp.end();
     });
 
-}).listen(8080);
+});
+
+// Serve the stylesheet
+app.get('/style.css', (req, res) => {
+    res.sendFile(__dirname + '/style.css');
+});
+
+app.listen(8080);
+
 
 console.log("Server listening on 8080");
